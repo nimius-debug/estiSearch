@@ -3,3 +3,4 @@ __pycache__/
 *.pyo
 .env
 ideas_*.txt
+idea_section_preview.html
