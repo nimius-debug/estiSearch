@@ -98,7 +98,8 @@ def esc(text: str) -> str:
 
 
 def render_body(text: str) -> str:
-    """Section text → simple paragraphs. Step lines get a bold prefix."""
+    """Section text → simple paragraphs. Step lines get a bold accent prefix.
+    'Opening line:' / 'Direction:' labels are bolded."""
     out = []
     for line in text.splitlines():
         s = line.strip()
@@ -107,22 +108,40 @@ def render_body(text: str) -> str:
         m = re.match(r"^(Step \d+) —\s*(.*)", s)
         if m:
             out.append(
-                f'<p style="margin:4px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
-                f'<strong>{esc(m.group(1))}.</strong> {esc(m.group(2))}</p>'
+                f'<p style="margin:5px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
+                f'<strong style="color:{ACCENT};">{esc(m.group(1))}.</strong> '
+                f'{esc(m.group(2))}</p>'
             )
-        else:
+            continue
+        m = re.match(r"^(Opening line:|Direction:)\s*(.*)", s)
+        if m:
             out.append(
-                f'<p style="margin:4px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
-                f'{esc(s)}</p>'
+                f'<p style="margin:5px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
+                f'<strong>{esc(m.group(1))}</strong> {esc(m.group(2))}</p>'
             )
+            continue
+        out.append(
+            f'<p style="margin:5px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
+            f'{esc(s)}</p>'
+        )
     return "\n".join(out)
 
 
-def section_html(label: str, content: str) -> str:
+def section_html(label: str, content: str, highlight: str = "") -> str:
+    """Plain section, or highlighted block when a background color is given."""
+    if highlight:
+        return f"""
+      <div style="margin:14px 0 0;background:{highlight};border-left:3px solid {ACCENT};
+                  border-radius:0 6px 6px 0;padding:9px 12px;">
+        <div style="font-size:11px;font-weight:800;letter-spacing:0.08em;
+                    color:{ACCENT};margin-bottom:3px;">{label}</div>
+        {render_body(content)}
+      </div>"""
     return f"""
       <div style="margin:14px 0 0;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;
-                    color:{ACCENT};margin-bottom:2px;">{label}</div>
+        <div style="font-size:11px;font-weight:800;letter-spacing:0.08em;
+                    color:{DARK};border-bottom:1px solid {LINE};
+                    padding-bottom:2px;margin-bottom:4px;">{label}</div>
         {render_body(content)}
       </div>"""
 
@@ -133,22 +152,35 @@ def idea_html(idea: dict, n: int) -> str:
     if s.get("TREND PATTERN"):
         body += section_html("TREND PATTERN", s["TREND PATTERN"])
     if s.get("HOOK"):
-        body += section_html("HOOK — FIRST 2–3 SECONDS", s["HOOK"])
+        body += section_html("&#9654;&nbsp; HOOK — FIRST 2–3 SECONDS", s["HOOK"],
+                             highlight="#fdf3ee")
     if s.get("VIDEO BREAKDOWN"):
         body += section_html("VIDEO BREAKDOWN", s["VIDEO BREAKDOWN"])
     if s.get("WHY IT WORKS"):
         body += section_html("WHY IT WORKS", s["WHY IT WORKS"])
     if s.get("CAPTION"):
-        body += section_html("CAPTION", s["CAPTION"])
+        body += section_html("&#9998;&nbsp; CAPTION — READY TO POST", s["CAPTION"],
+                             highlight="#faf6f2")
 
     return f"""
-  <div style="padding:18px 0;border-top:2px solid {DARK};">
-    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;
-                color:{MUTED};text-transform:uppercase;">
-      Idea {n} &nbsp;·&nbsp; {esc(idea['platform'])}
-    </div>
-    <div style="font-size:16px;font-weight:700;color:{DARK};
-                line-height:1.35;margin-top:3px;">{esc(idea['title'])}</div>
+  <div style="padding:18px 0;border-top:3px solid {DARK};">
+    <table cellpadding="0" cellspacing="0" style="width:100%;">
+      <tr>
+        <td style="vertical-align:top;width:30px;">
+          <div style="background:{ACCENT};color:#fff;font-size:13px;font-weight:800;
+                      width:24px;height:24px;border-radius:50%;text-align:center;
+                      line-height:24px;">{n}</div>
+        </td>
+        <td style="vertical-align:top;padding-left:8px;">
+          <div style="font-size:16px;font-weight:800;color:{DARK};
+                      line-height:1.3;">{esc(idea['title'])}</div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;
+                      color:{ACCENT};text-transform:uppercase;margin-top:2px;">
+            {esc(idea['platform'])}
+          </div>
+        </td>
+      </tr>
+    </table>
     {body}
   </div>"""
 
@@ -169,8 +201,9 @@ def trend_list_html(title: str, items: list) -> str:
             )
     return f"""
     <div style="margin:14px 0 0;">
-      <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;
-                  color:{DARK};margin-bottom:3px;">{esc(title)}</div>
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.08em;
+                  color:{DARK};background:#f4f4f4;border-radius:4px;
+                  padding:4px 9px;margin-bottom:5px;display:inline-block;">{esc(title)}</div>
       {"".join(rows)}
     </div>"""
 
@@ -178,9 +211,9 @@ def trend_list_html(title: str, items: list) -> str:
 def trend_pulse_html() -> str:
     month = datetime.now().strftime("%B %Y")
     return f"""
-  <div style="padding:18px 0;border-top:2px solid {DARK};">
-    <div style="font-size:16px;font-weight:700;color:{DARK};">
-      Trend Pulse — {month}
+  <div style="padding:18px 0;border-top:3px solid {DARK};">
+    <div style="font-size:16px;font-weight:800;color:{DARK};">
+      &#128200;&nbsp; Trend Pulse — {month}
     </div>
     {trend_list_html("TIKTOK — AUDIO", TIKTOK_TRENDS["audio_formats"])}
     {trend_list_html("TIKTOK — VIRAL FORMATS (NO AUDIO)", TIKTOK_TRENDS["viral_formats"])}
