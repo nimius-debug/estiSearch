@@ -1,0 +1,30 @@
+name: Weekly Content Strategy — Skin by Laura Lo
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'   # Every Monday at 10:00 UTC
+  workflow_dispatch:         # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  send-content-ideas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate and email content ideas
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_PASS:         ${{ secrets.SMTP_PASS }}   # Gmail App Password
+          # Emails default to jorgegil9706@gmail.com → skinbylauralo@gmail.com
+          # Override via secrets EMAIL_SENDER / EMAIL_RECIPIENT if needed
+        run: python mailer.py
