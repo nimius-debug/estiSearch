@@ -49,6 +49,44 @@ TIKTOK_TRENDS = {
             "name": "'wow, ok' acting-range challenge",
             "pattern": "No-audio breakout format. Deadpan reaction to something wild or surprising.",
         },
+        {
+            "name": "Olivia Rodrigo new album (June 12 drop)",
+            "pattern": "Lyric-overlay carousels and emotional confessional formats. Pair a lyric about heartbreak or frustration with a skin story — the purging phase, the product that failed, the moment everything changed.",
+        },
+        {
+            "name": "'2026 Summer Anthem' 7-second format (Josh Fawaz audio)",
+            "pattern": "7-second face-to-camera clip + on-screen text + #summeranthem tag. Lowest barrier to viral entry this season — small accounts reporting millions of views on first attempt. Use for a punchy summer skin truth.",
+        },
+        {
+            "name": "Nirvana 'Smells Like Teen Spirit' — 'oh well, whatever, nevermind' lyric",
+            "pattern": "Nostalgia meets radical honesty. 'Things I used to believe about skincare... nevermind' format. Realism-first content that fits Laura's no-BS voice perfectly.",
+        },
+    ],
+    "viral_formats": [
+        {
+            "name": "Everyday horror moments",
+            "pattern": "List 5 relatable everyday moments framed as if they're horror movie scenes — early morning client cancellation, a product going out of stock, a mirror in bad lighting. Punchy text, no music needed. Humor + recognition = massive share rate.",
+        },
+        {
+            "name": "Color day challenge",
+            "pattern": "Pick one color, spend the day photographing everything in that shade — products, towels, lighting, ingredients. Build an artistic 6-image grid or Reel. Visually striking and completely original with zero production budget.",
+        },
+        {
+            "name": "Distracted mid-task freeze",
+            "pattern": "Film yourself mid-routine (folding towels, prepping a treatment room) — completely frozen, phone in hand, absorbed by a clip. Reveal what has you in a trance. Relatable + personal with a built-in curiosity hook.",
+        },
+        {
+            "name": "GRWM (Get Ready With Me)",
+            "pattern": "Highest-converting format in beauty right now. Show prep for a full treatment day — products, tools, mental state. Honest running commentary over aesthetic shots. Audiences want to feel like they're getting ready alongside Laura.",
+        },
+        {
+            "name": "Unedited podcast-style talking head",
+            "pattern": "No cuts, no music, no B-roll. Just Laura on camera explaining one skin truth plainly for 30-60 seconds. Polished affiliate content is losing trust fast — this format is winning it back. Low effort, high authority.",
+        },
+        {
+            "name": "Treatment room POV",
+            "pattern": "First-person camera as if the viewer is the client lying on the facial bed, looking up at the ceiling, the light, Laura's hands. Immersive, sensory, and deeply differentiated from every other esthetician account.",
+        },
     ],
     "content_patterns": [
         "Realism over fantasy — raw, behind-the-curtain content outperforms polished",
@@ -66,6 +104,9 @@ TIKTOK_TRENDS = {
         "Climate-adaptive skincare emerging as a conversation",
         "Beauty of Joseon Rice Sunscreen SPF 50+ viral moment",
         "TikTok is now the #1 beauty search engine (65% Gen Z, 55% Millennials discover here)",
+        "Azelaic Acid trending as the go-to active for sensitive skin — ingredient-literate audiences searching it by name",
+        "#fullfacenomascara (404K+ likes) — shift toward bold brows + dewy skin; opens content around treatments that enhance natural features",
+        "Exosome treatments emerging as viral advanced repair topic — positions Laura ahead of the curve",
     ],
 }
 
@@ -90,6 +131,40 @@ INSTAGRAM_TRENDS = {
         {
             "name": "Ariana Grande 'Hate That I Made You Love Me' situationship format",
             "pattern": "Apply breakup-song energy to skin situationships — bad habits, toxic products, regrets.",
+        },
+        {
+            "name": "'DACE' by Slayyyter — Model Mode trend",
+            "pattern": "Flip a rough or low-energy moment into a confident editorial pose on the beat drop. Strong for 'bad skin day → treatment day' or before/after energy.",
+        },
+        {
+            "name": "'Freakin' Out' by Dexter and the Moonrocks — 'remember who you are' format",
+            "pattern": "Straight-to-camera selfie + emotional text overlay, then transition into a montage of defining moments. Identity-driven storytelling — powerful for skin journey content.",
+        },
+        {
+            "name": "Hand-swipe transition (no audio required)",
+            "pattern": "Film empty space, swipe/cover camera, uncover to reveal a transformation. No trending audio needed — the visual payoff carries it. Ideal for treatment results, product reveals, routine before/after.",
+        },
+    ],
+    "viral_formats": [
+        {
+            "name": "'Remember who you are' slow-motion identity reveal",
+            "pattern": "Start with a straight-to-camera selfie, text overlay of an identity statement, then slow-motion montage of defining moments. For Laura: 'I am someone who heals skin, not hides it.' Emotional, shareable, stops the scroll.",
+        },
+        {
+            "name": "Raw conversational Reel",
+            "pattern": "No production value. Face to camera, natural light, talking directly to the viewer about one skin truth. The style is personal and immediate — like a voice note turned into a video. Outperforming high-production posts across all beauty niches right now.",
+        },
+        {
+            "name": "Before/after with emotional narration",
+            "pattern": "Not just visual transformation — the creator narrates the emotional experience of the journey over the visual. 'This is the face that cried in my car before this appointment' level of honesty. Deeply shareable because it's human, not clinical.",
+        },
+        {
+            "name": "Save-bait carousel (educational)",
+            "pattern": "Multi-slide carousel where each slide delivers one specific, actionable insight. Pigmentation map, acne trigger guide, barrier damage checklist. The last slide asks a question or has a soft CTA. Gets saves, which signals the algorithm to push reach.",
+        },
+        {
+            "name": "Day-in-the-life treatment room",
+            "pattern": "Unscripted follow-along of a full day in the treatment room — client prep, treatments, product choices, end-of-day. No script, no polish. Builds massive parasocial trust and positions Laura as the expert people want in their corner.",
         },
     ],
     "content_behaviors": [
@@ -148,8 +223,13 @@ def build_trend_brief(extra_trend: str = None) -> str:
     lines = []
 
     lines.append("═══ TIKTOK TRENDS — JUNE 2026 ═══\n")
-    lines.append("TRENDING AUDIO & FORMATS:")
+    lines.append("TRENDING AUDIO & AUDIO-DRIVEN FORMATS:")
     for item in TIKTOK_TRENDS["audio_formats"]:
+        lines.append(f"  • {item['name']}")
+        lines.append(f"    → {item['pattern']}")
+    lines.append("")
+    lines.append("VIRAL CONTENT FORMATS (NO AUDIO REQUIRED):")
+    for item in TIKTOK_TRENDS["viral_formats"]:
         lines.append(f"  • {item['name']}")
         lines.append(f"    → {item['pattern']}")
     lines.append("")
@@ -162,8 +242,13 @@ def build_trend_brief(extra_trend: str = None) -> str:
         lines.append(f"  • {t}")
 
     lines.append("\n═══ INSTAGRAM REELS TRENDS — JUNE 2026 ═══\n")
-    lines.append("TRENDING FORMATS:")
+    lines.append("TRENDING AUDIO-DRIVEN FORMATS:")
     for item in INSTAGRAM_TRENDS["formats"]:
+        lines.append(f"  • {item['name']}")
+        lines.append(f"    → {item['pattern']}")
+    lines.append("")
+    lines.append("VIRAL CONTENT FORMATS (NO AUDIO REQUIRED):")
+    for item in INSTAGRAM_TRENDS["viral_formats"]:
         lines.append(f"  • {item['name']}")
         lines.append(f"    → {item['pattern']}")
     lines.append("")
@@ -182,6 +267,43 @@ def build_trend_brief(extra_trend: str = None) -> str:
     return "\n".join(lines)
 
 
+PREFILL = '╔══════════════════════════════════════╗\n  1.'
+
+FORMAT_PROMPT = """Generate 6 original content ideas for Skin by Laura Lo.
+
+CRITICAL: Output ONLY the 6 ideas. No intro sentence, no closing note, no transitions between ideas.
+Use EXACTLY this block structure for every single idea — character for character:
+
+╔══════════════════════════════════════╗
+  [NUMBER]. CONCEPT TITLE IN CAPS
+  Platform: TikTok / Instagram Reels / Both
+╚══════════════════════════════════════╝
+
+TREND PATTERN
+  [Name of the trend/audio/format — one sentence on how the mechanic works]
+
+HOOK  (first 2–3 seconds)
+  [Exact scene: camera angle, what the viewer sees, hears, reads on screen. Cinematic and specific.]
+
+VIDEO BREAKDOWN
+  Step 1 — [what happens]
+  Step 2 — [what happens]
+  Step 3 — [what happens]
+  Step 4 — [what happens]
+
+WHY IT WORKS
+  [2–3 sentences: the psychological or emotional reason this stops the scroll,
+   drives saves/shares, and fits the algorithm right now.]
+
+CAPTION
+  Opening line: "[exact first sentence Laura should post — ready to copy-paste]"
+  Direction: [tone note + CTA or engagement hook]
+
+──────────────────────────────────────────────────────
+
+Mix: emotional, myth-busting, behind-the-scenes, bold-take. Vary platforms. Every idea unmistakably Skin by Laura Lo."""
+
+
 def generate_ideas(extra_trend: str = None) -> str:
     """Call Claude API and return formatted content ideas."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
@@ -193,53 +315,39 @@ def generate_ideas(extra_trend: str = None) -> str:
     client = anthropic.Anthropic(api_key=api_key)
     trend_brief = build_trend_brief(extra_trend)
 
-    user_prompt = f"""Here is the current trend intelligence report:
-
-{trend_brief}
-
-Generate 6 original content ideas for Skin by Laura Lo.
-
-Use EXACTLY this format for each idea — no deviations:
-
-╔══════════════════════════════════════╗
-  [NUMBER]. CONCEPT TITLE IN CAPS
-  Platform: TikTok / Instagram Reels / Both
-╚══════════════════════════════════════╝
-
-TREND PATTERN
-  [Name of the trend/audio/format + one sentence on how the pattern works]
-
-HOOK  (first 2–3 seconds)
-  [Exact scene: what the viewer SEES and HEARS the moment it plays.
-   Be cinematic and specific — camera angle, sound, text on screen.]
-
-VIDEO BREAKDOWN
-  Step 1 — [what happens]
-  Step 2 — [what happens]
-  Step 3 — [what happens]
-  Step 4 — [what happens, if needed]
-
-WHY IT WORKS
-  [2–3 sentences. Explain the emotional or psychological reason this
-   stops the scroll, drives saves/shares, and fits the algorithm right now.]
-
-CAPTION
-  Opening line: "[exact first line to use]"
-  Direction: [tone note + CTA or engagement prompt]
-
-──────────────────────────────────────────────────────
-
-Mix emotional, myth-busting, behind-the-scenes, and bold-take content types.
-Vary platforms. Every idea must feel unmistakably Skin by Laura Lo."""
-
     message = client.messages.create(
-        model="claude-opus-4-8",
-        max_tokens=2500,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_prompt}],
+        model="claude-haiku-4-5-20251001",
+        max_tokens=4096,
+        system=[
+            {
+                "type": "text",
+                "text": SYSTEM_PROMPT,
+                "cache_control": {"type": "ephemeral"},  # cached — brand DNA never changes
+            }
+        ],
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"TREND INTELLIGENCE REPORT:\n\n{trend_brief}",
+                        "cache_control": {"type": "ephemeral"},  # cached — trends update monthly
+                    },
+                    {
+                        "type": "text",
+                        "text": FORMAT_PROMPT,
+                    },
+                ],
+            },
+            {
+                "role": "assistant",
+                "content": PREFILL,  # forces the exact box structure from the first character
+            },
+        ],
     )
 
-    return message.content[0].text
+    return PREFILL + message.content[0].text
 
 
 # ── CLI Output ────────────────────────────────────────────────────────────────
@@ -256,27 +364,52 @@ def print_header():
 def print_trend_pulse():
     print("── TREND PULSE ──────────────────────────────────────────────")
     print()
-    print("  TIKTOK")
-    print("  › 'and Emily...that's all' — contrast/comparison format")
+    print("  TIKTOK — AUDIO-DRIVEN")
+    print("  › 'and Emily...that's all' — contrast/comparison")
     print("  › Bob Ross audio — skill-progression before/afters")
     print("  › Charli XCX 'Rock Music' — glitch-frame edits")
     print("  › 'wow, ok' challenge — no-audio deadpan reactions")
-    print("  › Realism > polish. Raw beats curated. Always.")
+    print("  › Olivia Rodrigo album (June 12) — lyric confessionals")
+    print("  › '2026 Summer Anthem' 7-sec — massive reach, low barrier")
+    print("  › Nirvana 'nevermind' lyric — nostalgia + radical honesty")
+    print()
+    print("  TIKTOK — VIRAL FORMATS (NO AUDIO NEEDED)")
+    print("  › Everyday horror moments — relatable situational humor")
+    print("  › Color day challenge — one color, full day, 6-image grid")
+    print("  › Distracted mid-task freeze — reveal what has you hooked")
+    print("  › GRWM — highest-converting beauty format right now")
+    print("  › Unedited podcast-style talking head — trust > polish")
+    print("  › Treatment room POV — client's-eye view, immersive")
+    print()
+    print("  TIKTOK — HOT SKINCARE TOPICS")
     print("  › Skin longevity replacing 'anti-aging' in search")
     print("  › Korean beauty + barrier repair = mainstream moment")
+    print("  › Azelaic Acid trending for sensitive skin")
+    print("  › #fullfacenomascara — bold brows + dewy skin shift")
+    print("  › Exosome treatments going viral")
     print()
-    print("  INSTAGRAM REELS")
+    print("  INSTAGRAM REELS — AUDIO-DRIVEN")
     print("  › 'I Am Home' (Beat It) — strut into your third place")
     print("  › 'I Have Therapy' POV — what actually restores you")
     print("  › Algorithm Prefers format — meta self-aware humor")
     print("  › Bieber 'EVERYTHING HALLELUJAH' — listing Reels")
     print("  › Grande situationship audio — toxic product breakups")
-    print("  › Unpolished > high-production for reach right now")
+    print("  › 'DACE' Slayyyter — rough moment → confident flip")
+    print("  › 'Freakin Out' — 'remember who you are' identity montage")
+    print("  › Hand-swipe transition — no audio, visual transformation")
     print()
-    print("  CROSS-PLATFORM PATTERNS")
+    print("  INSTAGRAM REELS — VIRAL FORMATS (NO AUDIO NEEDED)")
+    print("  › 'Remember who you are' slow-motion identity reveal")
+    print("  › Raw conversational Reel — face to camera, one truth")
+    print("  › Before/after with emotional narration over the visual")
+    print("  › Save-bait carousel — one insight per slide, saves = reach")
+    print("  › Day-in-the-life treatment room — unscripted follow-along")
+    print()
+    print("  CROSS-PLATFORM")
     print("  › Before/after needs emotional angle, not just visual")
     print("  › Save-bait: myth-busters, checklists, 'screenshot this'")
     print("  › Comment provocation = algorithm fuel on both platforms")
+    print("  › Unpolished > high-production across the board right now")
     print()
     print("─" * 62)
     print()
