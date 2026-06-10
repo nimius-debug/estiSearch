@@ -267,6 +267,43 @@ def build_trend_brief(extra_trend: str = None) -> str:
     return "\n".join(lines)
 
 
+PREFILL = '╔══════════════════════════════════════╗\n  1.'
+
+FORMAT_PROMPT = """Generate 6 original content ideas for Skin by Laura Lo.
+
+CRITICAL: Output ONLY the 6 ideas. No intro sentence, no closing note, no transitions between ideas.
+Use EXACTLY this block structure for every single idea — character for character:
+
+╔══════════════════════════════════════╗
+  [NUMBER]. CONCEPT TITLE IN CAPS
+  Platform: TikTok / Instagram Reels / Both
+╚══════════════════════════════════════╝
+
+TREND PATTERN
+  [Name of the trend/audio/format — one sentence on how the mechanic works]
+
+HOOK  (first 2–3 seconds)
+  [Exact scene: camera angle, what the viewer sees, hears, reads on screen. Cinematic and specific.]
+
+VIDEO BREAKDOWN
+  Step 1 — [what happens]
+  Step 2 — [what happens]
+  Step 3 — [what happens]
+  Step 4 — [what happens]
+
+WHY IT WORKS
+  [2–3 sentences: the psychological or emotional reason this stops the scroll,
+   drives saves/shares, and fits the algorithm right now.]
+
+CAPTION
+  Opening line: "[exact first sentence Laura should post — ready to copy-paste]"
+  Direction: [tone note + CTA or engagement hook]
+
+──────────────────────────────────────────────────────
+
+Mix: emotional, myth-busting, behind-the-scenes, bold-take. Vary platforms. Every idea unmistakably Skin by Laura Lo."""
+
+
 def generate_ideas(extra_trend: str = None) -> str:
     """Call Claude API and return formatted content ideas."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
@@ -278,53 +315,39 @@ def generate_ideas(extra_trend: str = None) -> str:
     client = anthropic.Anthropic(api_key=api_key)
     trend_brief = build_trend_brief(extra_trend)
 
-    user_prompt = f"""Here is the current trend intelligence report:
-
-{trend_brief}
-
-Generate 6 original content ideas for Skin by Laura Lo.
-
-Use EXACTLY this format for each idea — no deviations:
-
-╔══════════════════════════════════════╗
-  [NUMBER]. CONCEPT TITLE IN CAPS
-  Platform: TikTok / Instagram Reels / Both
-╚══════════════════════════════════════╝
-
-TREND PATTERN
-  [Name of the trend/audio/format + one sentence on how the pattern works]
-
-HOOK  (first 2–3 seconds)
-  [Exact scene: what the viewer SEES and HEARS the moment it plays.
-   Be cinematic and specific — camera angle, sound, text on screen.]
-
-VIDEO BREAKDOWN
-  Step 1 — [what happens]
-  Step 2 — [what happens]
-  Step 3 — [what happens]
-  Step 4 — [what happens, if needed]
-
-WHY IT WORKS
-  [2–3 sentences. Explain the emotional or psychological reason this
-   stops the scroll, drives saves/shares, and fits the algorithm right now.]
-
-CAPTION
-  Opening line: "[exact first line to use]"
-  Direction: [tone note + CTA or engagement prompt]
-
-──────────────────────────────────────────────────────
-
-Mix emotional, myth-busting, behind-the-scenes, and bold-take content types.
-Vary platforms. Every idea must feel unmistakably Skin by Laura Lo."""
-
     message = client.messages.create(
-        model="claude-opus-4-8",
+        model="claude-haiku-4-5-20251001",
         max_tokens=4096,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_prompt}],
+        system=[
+            {
+                "type": "text",
+                "text": SYSTEM_PROMPT,
+                "cache_control": {"type": "ephemeral"},  # cached — brand DNA never changes
+            }
+        ],
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"TREND INTELLIGENCE REPORT:\n\n{trend_brief}",
+                        "cache_control": {"type": "ephemeral"},  # cached — trends update monthly
+                    },
+                    {
+                        "type": "text",
+                        "text": FORMAT_PROMPT,
+                    },
+                ],
+            },
+            {
+                "role": "assistant",
+                "content": PREFILL,  # forces the exact box structure from the first character
+            },
+        ],
     )
 
-    return message.content[0].text
+    return PREFILL + message.content[0].text
 
 
 # ── CLI Output ────────────────────────────────────────────────────────────────
