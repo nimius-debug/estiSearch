@@ -2,16 +2,16 @@
 """
 Weekly HTML email report for Skin by Laura Lo.
 
-Calls generate_ideas(), parses the structured output, renders a clean
-HTML email, and sends it via SMTP.
+Calls generate_ideas(), parses the structured output, renders a simple
+mobile-first HTML report, and sends it via SMTP.
 
 Required environment variables:
   ANTHROPIC_API_KEY  — Anthropic API key
-  EMAIL_RECIPIENT    — destination address
-  EMAIL_SENDER       — from address
   SMTP_PASS          — SMTP password / Gmail app password
 
-Optional environment variables (defaults to Gmail):
+Optional environment variables:
+  EMAIL_SENDER       — default: jorgegil9706@gmail.com
+  EMAIL_RECIPIENT    — default: skinbylauralo@gmail.com
   SMTP_HOST          — default: smtp.gmail.com
   SMTP_PORT          — default: 587
   SMTP_USER          — default: EMAIL_SENDER
@@ -28,31 +28,11 @@ from email.mime.text import MIMEText
 from strategist import generate_ideas, TIKTOK_TRENDS, INSTAGRAM_TRENDS
 
 
-# ── Brand palette ─────────────────────────────────────────────────────────────
-
-C = {
-    "bg":           "#faf7f5",
-    "card":         "#ffffff",
-    "header":       "#1a1a1a",
-    "accent":       "#c4846c",
-    "accent_light": "#f5ede8",
-    "text":         "#1a1a1a",
-    "muted":        "#6b7280",
-    "border":       "#e5e7eb",
-    # section colors
-    "trend_bg":     "#f0f9f5",  "trend_b":  "#34a37e",
-    "hook_bg":      "#fff8ec",  "hook_b":   "#f59e0b",
-    "break_bg":     "#f4f4ff",  "break_b":  "#6366f1",
-    "why_bg":       "#fdf4ff",  "why_b":    "#9333ea",
-    "cap_bg":       "#fff5f0",  "cap_b":    "#c4846c",
-}
-
-PLATFORM_COLORS = {
-    "TikTok":                   ("#010101", "#ffffff"),
-    "Instagram Reels":          ("#e1306c", "#ffffff"),
-    "Both":                     ("#7c3aed", "#ffffff"),
-    "TikTok + Instagram Reels": ("#7c3aed", "#ffffff"),
-}
+ACCENT = "#b5705a"   # terracotta brand color
+DARK   = "#1a1a1a"
+TEXT   = "#333333"
+MUTED  = "#777777"
+LINE   = "#e2e2e2"
 
 SECTION_KEYS = ["TREND PATTERN", "HOOK", "VIDEO BREAKDOWN", "WHY IT WORKS", "CAPTION"]
 DIVIDER_RE   = re.compile(r"─{10,}")
@@ -118,147 +98,95 @@ def esc(text: str) -> str:
 
 
 def render_body(text: str) -> str:
-    """Convert plain section text to inline HTML with Step highlights."""
-    html = []
+    """Section text → simple paragraphs. Step lines get a bold prefix."""
+    out = []
     for line in text.splitlines():
         s = line.strip()
         if not s:
             continue
-        m = re.match(r"^(Step \d+ —)\s*(.*)", s)
+        m = re.match(r"^(Step \d+) —\s*(.*)", s)
         if m:
-            html.append(
-                f'<div style="margin:5px 0;padding:6px 10px;background:#fff;'
-                f'border-left:3px solid {C["border"]};border-radius:0 4px 4px 0;">'
-                f'<strong style="color:{C["text"]};">{esc(m.group(1))}</strong> '
-                f'{esc(m.group(2))}</div>'
+            out.append(
+                f'<p style="margin:4px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
+                f'<strong>{esc(m.group(1))}.</strong> {esc(m.group(2))}</p>'
             )
         else:
-            html.append(f'<p style="margin:5px 0;line-height:1.65;">{esc(s)}</p>')
-    return "\n".join(html)
+            out.append(
+                f'<p style="margin:4px 0;font-size:13px;line-height:1.6;color:{TEXT};">'
+                f'{esc(s)}</p>'
+            )
+    return "\n".join(out)
 
 
-def section_html(key: str, content: str, bg: str, border: str, label: str = "") -> str:
-    title = label or key
+def section_html(label: str, content: str) -> str:
     return f"""
-    <div style="margin:10px 0;border-radius:6px;overflow:hidden;
-                border-left:4px solid {border};background:{bg};">
-      <div style="padding:7px 14px 3px;font-size:10px;font-weight:700;
-                  letter-spacing:0.09em;text-transform:uppercase;color:{border};">
-        {title}
-      </div>
-      <div style="padding:3px 14px 11px;font-size:13.5px;color:#374151;">
+      <div style="margin:14px 0 0;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;
+                    color:{ACCENT};margin-bottom:2px;">{label}</div>
         {render_body(content)}
-      </div>
-    </div>"""
+      </div>"""
 
 
-def idea_card_html(idea: dict, n: int) -> str:
-    pb_bg, pb_fg = PLATFORM_COLORS.get(idea["platform"], ("#6b7280", "#fff"))
+def idea_html(idea: dict, n: int) -> str:
     s = idea.get("sections", {})
-
     body = ""
     if s.get("TREND PATTERN"):
-        body += section_html("TREND PATTERN", s["TREND PATTERN"],
-                             C["trend_bg"], C["trend_b"])
+        body += section_html("TREND PATTERN", s["TREND PATTERN"])
     if s.get("HOOK"):
-        body += section_html("HOOK", s["HOOK"],
-                             C["hook_bg"], C["hook_b"], label="HOOK — first 2–3 seconds")
+        body += section_html("HOOK — FIRST 2–3 SECONDS", s["HOOK"])
     if s.get("VIDEO BREAKDOWN"):
-        body += section_html("VIDEO BREAKDOWN", s["VIDEO BREAKDOWN"],
-                             C["break_bg"], C["break_b"])
+        body += section_html("VIDEO BREAKDOWN", s["VIDEO BREAKDOWN"])
     if s.get("WHY IT WORKS"):
-        body += section_html("WHY IT WORKS", s["WHY IT WORKS"],
-                             C["why_bg"], C["why_b"])
+        body += section_html("WHY IT WORKS", s["WHY IT WORKS"])
     if s.get("CAPTION"):
-        body += section_html("CAPTION", s["CAPTION"],
-                             C["cap_bg"], C["cap_b"])
+        body += section_html("CAPTION", s["CAPTION"])
 
     return f"""
-  <div style="background:{C['card']};border-radius:10px;margin:18px 0;
-              border:1px solid {C['border']};overflow:hidden;">
-    <table width="100%" cellpadding="0" cellspacing="0">
-      <tr>
-        <td style="background:{C['header']};padding:14px 18px;">
-          <table width="100%" cellpadding="0" cellspacing="0">
-            <tr>
-              <td width="32" valign="middle">
-                <div style="background:{C['accent']};color:#fff;font-size:12px;font-weight:700;
-                            width:26px;height:26px;border-radius:50%;text-align:center;
-                            line-height:26px;">{n}</div>
-              </td>
-              <td valign="middle" style="padding-left:10px;">
-                <span style="color:#fff;font-size:15px;font-weight:700;">
-                  {esc(idea['title'])}
-                </span>
-              </td>
-              <td align="right" valign="middle" style="white-space:nowrap;padding-left:12px;">
-                <span style="background:{pb_bg};color:{pb_fg};font-size:10px;font-weight:700;
-                             padding:3px 10px;border-radius:20px;letter-spacing:0.04em;">
-                  {esc(idea['platform'])}
-                </span>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding:14px 18px 18px;">{body}</td>
-      </tr>
-    </table>
+  <div style="padding:18px 0;border-top:2px solid {DARK};">
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;
+                color:{MUTED};text-transform:uppercase;">
+      Idea {n} &nbsp;·&nbsp; {esc(idea['platform'])}
+    </div>
+    <div style="font-size:16px;font-weight:700;color:{DARK};
+                line-height:1.35;margin-top:3px;">{esc(idea['title'])}</div>
+    {body}
   </div>"""
 
 
-def trend_pulse_section_html(title: str, color: str, items: list) -> str:
-    rows = "".join(
-        f'<tr><td style="padding:3px 0;font-size:12.5px;color:#374151;'
-        f'border-bottom:1px solid {C["border"]};">'
-        f'<strong>{esc(item if isinstance(item, str) else item["name"])}</strong>'
-        + (f' <span style="color:{C["muted"]};">— {esc(item["pattern"])}</span>'
-           if isinstance(item, dict) else "")
-        + "</td></tr>"
-        for item in items
-    )
+def trend_list_html(title: str, items: list) -> str:
+    rows = []
+    for item in items:
+        if isinstance(item, dict):
+            rows.append(
+                f'<p style="margin:3px 0;font-size:12px;line-height:1.55;color:{TEXT};">'
+                f'&bull; <strong>{esc(item["name"])}</strong> — '
+                f'<span style="color:{MUTED};">{esc(item["pattern"])}</span></p>'
+            )
+        else:
+            rows.append(
+                f'<p style="margin:3px 0;font-size:12px;line-height:1.55;color:{TEXT};">'
+                f'&bull; {esc(item)}</p>'
+            )
     return f"""
-  <td width="50%" valign="top" style="padding:6px;">
-    <div style="background:#f9fafb;border-radius:8px;border-top:3px solid {color};
-                padding:12px 14px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:0.09em;
-                  text-transform:uppercase;color:{color};margin-bottom:8px;">{esc(title)}</div>
-      <table width="100%" cellpadding="0" cellspacing="0">{rows}</table>
-    </div>
-  </td>"""
+    <div style="margin:14px 0 0;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;
+                  color:{DARK};margin-bottom:3px;">{esc(title)}</div>
+      {"".join(rows)}
+    </div>"""
 
 
 def trend_pulse_html() -> str:
-    month = datetime.now().strftime("%B %Y").upper()
-
-    col_a = trend_pulse_section_html("TikTok — Audio", "#010101",
-                                     TIKTOK_TRENDS["audio_formats"])
-    col_b = trend_pulse_section_html("TikTok — Viral Formats", "#2563eb",
-                                     TIKTOK_TRENDS["viral_formats"])
-    col_c = trend_pulse_section_html("Instagram — Audio", "#e1306c",
-                                     INSTAGRAM_TRENDS["formats"])
-    col_d = trend_pulse_section_html("Instagram — Viral Formats", "#9333ea",
-                                     INSTAGRAM_TRENDS["viral_formats"])
-    col_e_inner = trend_pulse_section_html("Hot Skincare Topics", C["accent"],
-                                           TIKTOK_TRENDS["skincare_topics"])
-    col_e = col_e_inner.replace('width="50%"', 'width="100%"')
-
+    month = datetime.now().strftime("%B %Y")
     return f"""
-  <div style="background:{C['card']};border-radius:10px;margin:18px 0;
-              border:1px solid {C['border']};overflow:hidden;">
-    <div style="background:{C['accent']};padding:12px 18px;">
-      <span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:0.05em;">
-        TREND PULSE — {month}
-      </span>
+  <div style="padding:18px 0;border-top:2px solid {DARK};">
+    <div style="font-size:16px;font-weight:700;color:{DARK};">
+      Trend Pulse — {month}
     </div>
-    <div style="padding:12px 12px 14px;">
-      <table width="100%" cellpadding="0" cellspacing="0">
-        <tr>{col_a}{col_b}</tr>
-        <tr>{col_c}{col_d}</tr>
-        <tr><td colspan="2">{col_e}</td></tr>
-      </table>
-    </div>
+    {trend_list_html("TIKTOK — AUDIO", TIKTOK_TRENDS["audio_formats"])}
+    {trend_list_html("TIKTOK — VIRAL FORMATS (NO AUDIO)", TIKTOK_TRENDS["viral_formats"])}
+    {trend_list_html("HOT SKINCARE TOPICS", TIKTOK_TRENDS["skincare_topics"])}
+    {trend_list_html("INSTAGRAM — AUDIO", INSTAGRAM_TRENDS["formats"])}
+    {trend_list_html("INSTAGRAM — VIRAL FORMATS (NO AUDIO)", INSTAGRAM_TRENDS["viral_formats"])}
   </div>"""
 
 
@@ -268,7 +196,7 @@ def build_html(ideas_raw: str) -> str:
     ideas    = parse_ideas(ideas_raw)
     date_str = datetime.now().strftime("%B %d, %Y")
     week_num = datetime.now().isocalendar()[1]
-    cards    = "\n".join(idea_card_html(idea, i + 1) for i, idea in enumerate(ideas))
+    blocks   = "\n".join(idea_html(idea, i + 1) for i, idea in enumerate(ideas))
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -277,53 +205,34 @@ def build_html(ideas_raw: str) -> str:
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Content Ideas — Skin by Laura Lo</title>
 </head>
-<body style="margin:0;padding:0;background:{C['bg']};
+<body style="margin:0;padding:0;background:#ffffff;word-wrap:break-word;
+             -webkit-text-size-adjust:100%;
              font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
-<div style="max-width:620px;margin:0 auto;padding:24px 16px;">
+<div style="max-width:600px;margin:0 auto;padding:20px 16px;">
 
   <!-- Header -->
-  <div style="background:{C['header']};border-radius:10px;padding:30px 24px;
-              text-align:center;margin-bottom:16px;">
-    <div style="font-size:10px;letter-spacing:0.14em;color:{C['accent']};
-                text-transform:uppercase;margin-bottom:8px;">Weekly Content Strategy</div>
-    <h1 style="margin:0 0 8px;font-size:26px;font-weight:700;color:#fff;letter-spacing:0.02em;">
+  <div style="padding-bottom:16px;">
+    <div style="font-size:11px;letter-spacing:0.12em;color:{ACCENT};
+                text-transform:uppercase;font-weight:700;">Weekly Content Report</div>
+    <div style="font-size:22px;font-weight:700;color:{DARK};margin-top:4px;">
       Skin by Laura Lo
-    </h1>
-    <p style="margin:0;font-size:12px;color:#9ca3af;">
-      Week {week_num} &nbsp;·&nbsp; {date_str} &nbsp;·&nbsp; 6 original ideas
-    </p>
-  </div>
-
-  <!-- Intro strip -->
-  <div style="background:{C['accent_light']};border-radius:8px;padding:13px 18px;
-              border-left:4px solid {C['accent']};font-size:13.5px;
-              color:#374151;line-height:1.6;margin-bottom:4px;">
-    Fresh ideas generated from this week's TikTok + Instagram trend intelligence.
-    Each idea is ready to film — hook, breakdown, and caption included.
+    </div>
+    <div style="font-size:12px;color:{MUTED};margin-top:3px;">
+      Week {week_num} &nbsp;·&nbsp; {date_str} &nbsp;·&nbsp; 6 ideas
+    </div>
   </div>
 
   <!-- Trend Pulse -->
   {trend_pulse_html()}
 
-  <!-- Ideas header -->
-  <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;color:{C['muted']};
-              text-transform:uppercase;margin:20px 0 4px;">
-    This Week's Content Ideas
-  </div>
-
-  <!-- Idea cards -->
-  {cards}
+  <!-- Idea blocks -->
+  {blocks}
 
   <!-- Footer -->
-  <div style="text-align:center;padding:22px 0 8px;font-size:11px;
-              color:{C['muted']};line-height:1.9;border-top:1px solid {C['border']};
-              margin-top:16px;">
-    Delivered every Monday. Run
-    <code style="background:#e5e7eb;padding:1px 6px;border-radius:3px;font-size:11px;">
-      python strategist.py
-    </code>
-    anytime for a fresh batch.<br>
-    <span style="color:{C['accent']};font-weight:600;">Skin by Laura Lo</span>
+  <div style="padding:16px 0;border-top:1px solid {LINE};font-size:11px;
+              color:{MUTED};line-height:1.7;">
+    Delivered every Monday. Run <code>python strategist.py</code> anytime for a fresh batch.<br>
+    <span style="color:{ACCENT};font-weight:600;">Skin by Laura Lo</span>
     &nbsp;·&nbsp; Barrier-first. Always.
   </div>
 
@@ -334,13 +243,9 @@ def build_html(ideas_raw: str) -> str:
 
 # ── Sender ────────────────────────────────────────────────────────────────────
 
-SENDER    = "jorgegil9706@gmail.com"
-RECIPIENT = "skinbylauralo@gmail.com"
-
-
 def send(html: str, subject: str) -> None:
-    sender    = os.environ.get("EMAIL_SENDER", SENDER)
-    recipient = os.environ.get("EMAIL_RECIPIENT", RECIPIENT)
+    sender    = os.environ.get("EMAIL_SENDER", "jorgegil9706@gmail.com")
+    recipient = os.environ.get("EMAIL_RECIPIENT", "skinbylauralo@gmail.com")
     host      = os.environ.get("SMTP_HOST", "smtp.gmail.com")
     port      = int(os.environ.get("SMTP_PORT", 587))
     user      = os.environ.get("SMTP_USER", sender)
