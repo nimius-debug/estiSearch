@@ -49,6 +49,18 @@ TIKTOK_TRENDS = {
             "name": "'wow, ok' acting-range challenge",
             "pattern": "No-audio breakout format. Deadpan reaction to something wild or surprising.",
         },
+        {
+            "name": "Olivia Rodrigo new album (June 12 drop)",
+            "pattern": "Lyric-overlay carousels and emotional confessional formats. Pair a lyric about heartbreak or frustration with a skin story — the purging phase, the product that failed, the moment everything changed.",
+        },
+        {
+            "name": "'2026 Summer Anthem' 7-second format (Josh Fawaz audio)",
+            "pattern": "7-second face-to-camera clip + on-screen text + #summeranthem tag. Lowest barrier to viral entry this season — small accounts reporting millions of views on first attempt. Use for a punchy summer skin truth.",
+        },
+        {
+            "name": "Nirvana 'Smells Like Teen Spirit' — 'oh well, whatever, nevermind' lyric",
+            "pattern": "Nostalgia meets radical honesty. 'Things I used to believe about skincare... nevermind' format. Realism-first content that fits Laura's no-BS voice perfectly.",
+        },
     ],
     "content_patterns": [
         "Realism over fantasy — raw, behind-the-curtain content outperforms polished",
@@ -66,6 +78,9 @@ TIKTOK_TRENDS = {
         "Climate-adaptive skincare emerging as a conversation",
         "Beauty of Joseon Rice Sunscreen SPF 50+ viral moment",
         "TikTok is now the #1 beauty search engine (65% Gen Z, 55% Millennials discover here)",
+        "Azelaic Acid trending as the go-to active for sensitive skin — ingredient-literate audiences searching it by name",
+        "#fullfacenomascara (404K+ likes) — shift toward bold brows + dewy skin; opens content around treatments that enhance natural features",
+        "Exosome treatments emerging as viral advanced repair topic — positions Laura ahead of the curve",
     ],
 }
 
@@ -90,6 +105,18 @@ INSTAGRAM_TRENDS = {
         {
             "name": "Ariana Grande 'Hate That I Made You Love Me' situationship format",
             "pattern": "Apply breakup-song energy to skin situationships — bad habits, toxic products, regrets.",
+        },
+        {
+            "name": "'DACE' by Slayyyter — Model Mode trend",
+            "pattern": "Flip a rough or low-energy moment into a confident editorial pose on the beat drop. Strong for 'bad skin day → treatment day' or before/after energy.",
+        },
+        {
+            "name": "'Freakin' Out' by Dexter and the Moonrocks — 'remember who you are' format",
+            "pattern": "Straight-to-camera selfie + emotional text overlay, then transition into a montage of defining moments. Identity-driven storytelling — powerful for skin journey content.",
+        },
+        {
+            "name": "Hand-swipe transition (no audio required)",
+            "pattern": "Film empty space, swipe/cover camera, uncover to reveal a transformation. No trending audio needed — the visual payoff carries it. Ideal for treatment results, product reveals, routine before/after.",
         },
     ],
     "content_behaviors": [
@@ -261,9 +288,15 @@ def print_trend_pulse():
     print("  › Bob Ross audio — skill-progression before/afters")
     print("  › Charli XCX 'Rock Music' — glitch-frame edits")
     print("  › 'wow, ok' challenge — no-audio deadpan reactions")
+    print("  › Olivia Rodrigo album (June 12) — lyric-overlay confessionals  [NEW]")
+    print("  › '2026 Summer Anthem' 7-sec format — massive reach, low barrier  [NEW]")
+    print("  › Nirvana 'nevermind' lyric — nostalgia + radical honesty  [NEW]")
     print("  › Realism > polish. Raw beats curated. Always.")
     print("  › Skin longevity replacing 'anti-aging' in search")
     print("  › Korean beauty + barrier repair = mainstream moment")
+    print("  › Azelaic Acid trending for sensitive skin  [NEW]")
+    print("  › #fullfacenomascara — bold brows + dewy skin shift  [NEW]")
+    print("  › Exosome treatments going viral  [NEW]")
     print()
     print("  INSTAGRAM REELS")
     print("  › 'I Am Home' (Beat It) — strut into your third place")
@@ -271,6 +304,9 @@ def print_trend_pulse():
     print("  › Algorithm Prefers format — meta self-aware humor")
     print("  › Bieber 'EVERYTHING HALLELUJAH' — listing Reels")
     print("  › Grande situationship audio — toxic product breakups")
+    print("  › 'DACE' Slayyyter — Model Mode / rough-to-confident flip  [NEW]")
+    print("  › 'Freakin Out' — 'remember who you are' identity montage  [NEW]")
+    print("  › Hand-swipe transition — no audio, visual transformation  [NEW]")
     print("  › Unpolished > high-production for reach right now")
     print()
     print("  CROSS-PLATFORM PATTERNS")
