@@ -319,7 +319,7 @@ Vary platforms. Every idea must feel unmistakably Skin by Laura Lo."""
 
     message = client.messages.create(
         model="claude-opus-4-8",
-        max_tokens=2500,
+        max_tokens=4096,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
