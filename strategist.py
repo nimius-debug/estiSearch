@@ -32,18 +32,22 @@ TIKTOK_TRENDS = {
         {
             "name": "'When you get THE picture' (CORTIS audio)",
             "pattern": "The shared freak-out IS the bit. Show a friend/client a result so good you both start gagging. For Laura: revealing a client's healed-skin photo and both of you losing it — the genuine reaction sells the transformation harder than any before/after grid.",
+            "link": "https://www.tiktok.com/music/%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90-%EC%82%AC%EC%9A%B4%EB%93%9C-CORTIS-7654462113867385608",
         },
         {
             "name": "'Me and my POV' split-screen (original audio)",
             "pattern": "Top frame: you in selfie mode. Bottom frame: exactly what you're looking at. For Laura: her face reacting up top, a client's congested skin under the lamp below — narrate what she's actually seeing as an expert.",
+            "link": "https://www.tiktok.com/music/original-sound-7640107897372052226",
         },
         {
             "name": "'Reaching out transition' (MJ original sound)",
             "pattern": "Start in pjs, hit the beat, land in your going-out fit + a text overlay that hits too close to home. For Laura: 'me before my barrier healed' (dull, hiding) → beat → 'me now' (bare, glowing) with a relatable skin caption.",
+            "link": "https://www.tiktok.com/music/original-sound-7574082891341187862",
         },
         {
             "name": "'Jujutsu Kaisen' identity lineup (original audio)",
             "pattern": "A group strikes the same pose, each holding the thing that IS them; video snaps person to person. For Laura: a lineup of skin types or hero products — 'the barrier girlie,' 'the SPF evangelist,' 'the azelaic acid believer' — rapid-fire personalities.",
+            "link": "https://www.tiktok.com/music/original-sound-7646118797946522381",
         },
         {
             "name": "'Sound of water vs sound of…' split-screen",
@@ -52,24 +56,29 @@ TIKTOK_TRENDS = {
         {
             "name": "'REDRED dance challenge' (Cortis)",
             "pattern": "Energetic choreography on trending REDRED audio — easy solo or with a group. For Laura: low-stakes way to show personality and bring the treatment-room team on camera; humanizes the brand fast.",
+            "link": "https://www.tiktok.com/music/REDRED-7629278086664767505",
         },
         {
             "name": "'Sorry, my hands are full' product stack",
             "pattern": "Pile the products you refuse to put down into your arms; text reads 'sorry, my hands are full.' For Laura: the irreplaceable barrier-repair starter pack — positions her curated picks as the non-negotiable lineup.",
+            "link": "https://www.tiktok.com/music/original-sound-7607556252155710221",
         },
     ],
     "viral_formats": [
         {
             "name": "'Describe your job but make it illegal'",
             "pattern": "Clip of you doing what you're best at + text 'describe your job but make it sound illegal.' Let the contrast do the work. For Laura: extractions, dermaplaning, or chemical peels framed in deadpan 'felony' language — low effort, high curiosity, very shareable.",
+            "link": "https://www.tiktok.com/music/original-sound-7593428698969885462",
         },
         {
             "name": "'My camera roll is full… nevermind' fake-out",
             "pattern": "Pretend to start deleting photos to free space, then cut to the avalanche you could never part with. For Laura: 'maybe I should delete some client photos…' → nevermind → flood of glow-up results. The twist is the whole bit.",
+            "link": "https://www.tiktok.com/music/original-sound-7637917360795470623",
         },
         {
             "name": "'How to make [X] fans nervous' tension gag",
             "pattern": "Do something that looks mildly risky to people who care about pristine things — tension comes from what ALMOST happens, then relief. For Laura: hovering near a perfectly clean pore-extraction, a wobbling shelf of serums — 'making skincare girlies nervous.' 5–10 sec, close-up, audio carries it.",
+            "link": "https://www.tiktok.com/@carlylego",
         },
         {
             "name": "'Tone challenge game' (group)",
@@ -111,36 +120,44 @@ INSTAGRAM_TRENDS = {
         {
             "name": "'The summer schedule' 4x-looping hook (original audio)",
             "pattern": "A visual loop where the hook lands four times, pulling viewers back in — made to romanticize a daily routine. For Laura: romanticize the morning skin ritual or the treatment-room open, looped so it rewatches itself.",
+            "link": "https://www.instagram.com/reels/audio/202891871734130/",
         },
         {
             "name": "'I would literally do anything for you' (over-the-top vs reality)",
             "pattern": "A dramatic declaration meets tiny real stakes — the bigger the gap, the better. For Laura: 'I'd do ANYTHING for my clients' → cut to her gently refusing to let them over-exfoliate. Relatable, warm, EGC-style.",
+            "link": "https://www.instagram.com/reels/audio/35981693481446045/",
         },
         {
             "name": "'What you want' confident flex (Respect – Aretha)",
             "pattern": "Show exactly what you offer in the most satisfying way — 'here's what we do, and we do it well.' For Laura: a clean, proud montage of signature treatments. Own-it energy for a service brand.",
+            "link": "https://www.instagram.com/reels/audio/515371218997711/",
         },
         {
             "name": "'Sketch my outfit' draw-to-real morph (original audio)",
             "pattern": "Sketch each item onto yourself, then each drawing morphs into the real thing. For Laura: 'sketch my routine' — draw each step, morph into the actual product/result. Equal parts art project and reveal.",
+            "link": "https://www.instagram.com/reels/audio/242667523150430/",
         },
         {
             "name": "'Do you wanna?' question-into-answer (Human Nature – MJ)",
             "pattern": "Open with a 'do you wanna…' prompt about whether you're ready, then cut to you fully doing the thing. For Laura: 'do you wanna finally stop guessing with your skin?' → cut to the consult/treatment in motion.",
+            "link": "https://www.instagram.com/reels/audio/1066931830157201/",
         },
         {
             "name": "'Girl grip' one-hand haul flex (I'm Every Woman – Chaka Khan)",
             "pattern": "Haul your entire life in one hand with total confidence. For Laura: the one-handed grip of all her must-have products/tools heading into a treatment — a flex that doubles as a product showcase.",
+            "link": "https://www.instagram.com/reels/audio/1715351118547270/",
         },
         {
             "name": "'Lens wipe transition' glow-up reveal",
             "pattern": "Film the 'before,' wipe the lens, reveal the glow-up — product, aesthetic, or skin shift. Clean, satisfying, hard to scroll past. Ideal for treatment before/after with zero fancy editing.",
+            "link": "https://www.instagram.com/reels/audio/26923322580669821/",
         },
     ],
     "viral_formats": [
         {
             "name": "'Plan ABC' alternate-timeline slides",
             "pattern": "Each slide reveals a different hypothetical path — the dream, the chaos, the 'honestly that works too.' For Laura: 'Plan A: perfect routine. Plan B: barrier repair after I overdid it. Plan C: just SPF and sleep.' Playful, bendable to any niche.",
+            "link": "https://www.instagram.com/reels/audio/26885590624412674/",
         },
         {
             "name": "'Stomp to reveal' jump transition",
@@ -149,6 +166,7 @@ INSTAGRAM_TRENDS = {
         {
             "name": "'Too shy to take pics in public' (introvert vs ride-or-die)",
             "pattern": "One person mortified to be photographed; the other directs a full editorial like nobody's watching. For Laura: the nervous-about-their-skin client vs Laura, the ride-or-die who sees the glow-up potential. Wildly relatable.",
+            "link": "https://www.instagram.com/reels/audio/1279574933274134/",
         },
         {
             "name": "'Stretched word' swipe-for-payoff carousel",

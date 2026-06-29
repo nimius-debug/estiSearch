@@ -189,9 +189,16 @@ def trend_list_html(title: str, items: list) -> str:
     rows = []
     for item in items:
         if isinstance(item, dict):
+            name = f'<strong>{esc(item["name"])}</strong>'
+            if item.get("link"):
+                name += (
+                    f' <a href="{esc(item["link"])}" '
+                    f'style="color:{ACCENT};text-decoration:none;font-weight:600;">'
+                    f'&#8599; example</a>'
+                )
             rows.append(
                 f'<p style="margin:3px 0;font-size:12px;line-height:1.55;color:{TEXT};">'
-                f'&bull; <strong>{esc(item["name"])}</strong> — '
+                f'&bull; {name} — '
                 f'<span style="color:{MUTED};">{esc(item["pattern"])}</span></p>'
             )
         else:
