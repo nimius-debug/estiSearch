@@ -30,68 +30,64 @@ BRAND_VOICE = "Warm, expert, honest, conversational, no-BS, nurturing, elevated,
 TIKTOK_TRENDS = {
     "audio_formats": [
         {
-            "name": "'and Emily… that's all' audio",
-            "pattern": "Compare two approaches — one clearly superior. Works for myth-busting and product comparisons.",
+            "name": "'When you get THE picture' (CORTIS audio)",
+            "pattern": "The shared freak-out IS the bit. Show a friend/client a result so good you both start gagging. For Laura: revealing a client's healed-skin photo and both of you losing it — the genuine reaction sells the transformation harder than any before/after grid.",
         },
         {
-            "name": "Bob Ross 'talent is a pursued interest' audio",
-            "pattern": "Before/after skill-progression clips. Glow-ups, skin journeys, learning curves.",
+            "name": "'Me and my POV' split-screen (original audio)",
+            "pattern": "Top frame: you in selfie mode. Bottom frame: exactly what you're looking at. For Laura: her face reacting up top, a client's congested skin under the lamp below — narrate what she's actually seeing as an expert.",
         },
         {
-            "name": "Josh Fawaz 'Like a Prayer' remix",
-            "pattern": "Summer 2026 anthem. Drives aesthetic slow-motion montages and transformation reels.",
+            "name": "'Reaching out transition' (MJ original sound)",
+            "pattern": "Start in pjs, hit the beat, land in your going-out fit + a text overlay that hits too close to home. For Laura: 'me before my barrier healed' (dull, hiding) → beat → 'me now' (bare, glowing) with a relatable skin caption.",
         },
         {
-            "name": "Charli XCX 'Rock Music'",
-            "pattern": "Stuck-frame glitch edit — freeze, text pop, resume. High energy contrast content.",
+            "name": "'Jujutsu Kaisen' identity lineup (original audio)",
+            "pattern": "A group strikes the same pose, each holding the thing that IS them; video snaps person to person. For Laura: a lineup of skin types or hero products — 'the barrier girlie,' 'the SPF evangelist,' 'the azelaic acid believer' — rapid-fire personalities.",
         },
         {
-            "name": "'wow, ok' acting-range challenge",
-            "pattern": "No-audio breakout format. Deadpan reaction to something wild or surprising.",
+            "name": "'Sound of water vs sound of…' split-screen",
+            "pattern": "Plain water = silence. The good thing = a whole soundtrack kicks in. For Laura: 'a harsh foaming cleanser' (silence) vs 'a barrier-first routine' (the song drops). Built-in contrast gag for product comparisons.",
         },
         {
-            "name": "Olivia Rodrigo new album (June 12 drop)",
-            "pattern": "Lyric-overlay carousels and emotional confessional formats. Pair a lyric about heartbreak or frustration with a skin story — the purging phase, the product that failed, the moment everything changed.",
+            "name": "'REDRED dance challenge' (Cortis)",
+            "pattern": "Energetic choreography on trending REDRED audio — easy solo or with a group. For Laura: low-stakes way to show personality and bring the treatment-room team on camera; humanizes the brand fast.",
         },
         {
-            "name": "'2026 Summer Anthem' 7-second format (Josh Fawaz audio)",
-            "pattern": "7-second face-to-camera clip + on-screen text + #summeranthem tag. Lowest barrier to viral entry this season — small accounts reporting millions of views on first attempt. Use for a punchy summer skin truth.",
-        },
-        {
-            "name": "Nirvana 'Smells Like Teen Spirit' — 'oh well, whatever, nevermind' lyric",
-            "pattern": "Nostalgia meets radical honesty. 'Things I used to believe about skincare... nevermind' format. Realism-first content that fits Laura's no-BS voice perfectly.",
+            "name": "'Sorry, my hands are full' product stack",
+            "pattern": "Pile the products you refuse to put down into your arms; text reads 'sorry, my hands are full.' For Laura: the irreplaceable barrier-repair starter pack — positions her curated picks as the non-negotiable lineup.",
         },
     ],
     "viral_formats": [
         {
-            "name": "Everyday horror moments",
-            "pattern": "List 5 relatable everyday moments framed as if they're horror movie scenes — early morning client cancellation, a product going out of stock, a mirror in bad lighting. Punchy text, no music needed. Humor + recognition = massive share rate.",
+            "name": "'Describe your job but make it illegal'",
+            "pattern": "Clip of you doing what you're best at + text 'describe your job but make it sound illegal.' Let the contrast do the work. For Laura: extractions, dermaplaning, or chemical peels framed in deadpan 'felony' language — low effort, high curiosity, very shareable.",
         },
         {
-            "name": "Color day challenge",
-            "pattern": "Pick one color, spend the day photographing everything in that shade — products, towels, lighting, ingredients. Build an artistic 6-image grid or Reel. Visually striking and completely original with zero production budget.",
+            "name": "'My camera roll is full… nevermind' fake-out",
+            "pattern": "Pretend to start deleting photos to free space, then cut to the avalanche you could never part with. For Laura: 'maybe I should delete some client photos…' → nevermind → flood of glow-up results. The twist is the whole bit.",
         },
         {
-            "name": "Distracted mid-task freeze",
-            "pattern": "Film yourself mid-routine (folding towels, prepping a treatment room) — completely frozen, phone in hand, absorbed by a clip. Reveal what has you in a trance. Relatable + personal with a built-in curiosity hook.",
+            "name": "'How to make [X] fans nervous' tension gag",
+            "pattern": "Do something that looks mildly risky to people who care about pristine things — tension comes from what ALMOST happens, then relief. For Laura: hovering near a perfectly clean pore-extraction, a wobbling shelf of serums — 'making skincare girlies nervous.' 5–10 sec, close-up, audio carries it.",
         },
         {
-            "name": "GRWM (Get Ready With Me)",
-            "pattern": "Highest-converting format in beauty right now. Show prep for a full treatment day — products, tools, mental state. Honest running commentary over aesthetic shots. Audiences want to feel like they're getting ready alongside Laura.",
+            "name": "'Tone challenge game' (group)",
+            "pattern": "Each person reads the same on-screen line in a different tone — serious, funny, flirty — best when someone breaks character. For Laura: read a wild skincare myth or a real client excuse in escalating tones with the team. Collaborative and personality-forward.",
         },
         {
-            "name": "Unedited podcast-style talking head",
-            "pattern": "No cuts, no music, no B-roll. Just Laura on camera explaining one skin truth plainly for 30-60 seconds. Polished affiliate content is losing trust fast — this format is winning it back. Low effort, high authority.",
+            "name": "Aesthetic follow-along (e.g. 'viral dot cake')",
+            "pattern": "Quick, satisfying, visually clean follow-along of a simple process. For Laura: a follow-along of mixing a custom mask or layering a routine — ASMR-clean, screenshot-pretty, easy to recreate. Process content people watch to the end.",
         },
         {
-            "name": "Treatment room POV",
-            "pattern": "First-person camera as if the viewer is the client lying on the facial bed, looking up at the ceiling, the light, Laura's hands. Immersive, sensory, and deeply differentiated from every other esthetician account.",
+            "name": "Treatment room POV (no audio needed)",
+            "pattern": "First-person camera as if the viewer is the client on the facial bed — ceiling, lamp, Laura's hands. Immersive, sensory, deeply differentiated. Still one of the strongest evergreen formats for an esthetician.",
         },
     ],
     "content_patterns": [
         "Realism over fantasy — raw, behind-the-curtain content outperforms polished",
         "Curiosity-driven discovery — audiences verify products/services on TikTok before buying",
-        "Skill-progression before/afters trending hard",
+        "Native format beats a script — even an obvious ad wins when it's the thing only you could make",
         "Quick-to-recreate, easy-to-remix formats dominate reach",
         "Audiences moving away from aspirational → toward relatable + real",
         "Comment sections engineered as part of the content strategy",
@@ -113,63 +109,59 @@ TIKTOK_TRENDS = {
 INSTAGRAM_TRENDS = {
     "formats": [
         {
-            "name": "'I Am Home' trend — Michael Jackson 'Beat It'",
-            "pattern": "Strut confidently into your third place. Works perfectly for the treatment room reveal.",
+            "name": "'The summer schedule' 4x-looping hook (original audio)",
+            "pattern": "A visual loop where the hook lands four times, pulling viewers back in — made to romanticize a daily routine. For Laura: romanticize the morning skin ritual or the treatment-room open, looped so it rewatches itself.",
         },
         {
-            "name": "'Seeing if the Algorithm Prefers' format",
-            "pattern": "High-effort edit vs. deadpan static shot. Let comments vote. Self-aware, meta humor.",
+            "name": "'I would literally do anything for you' (over-the-top vs reality)",
+            "pattern": "A dramatic declaration meets tiny real stakes — the bigger the gap, the better. For Laura: 'I'd do ANYTHING for my clients' → cut to her gently refusing to let them over-exfoliate. Relatable, warm, EGC-style.",
         },
         {
-            "name": "'I Have Therapy' POV",
-            "pattern": "Cut from the excuse ('can't today') to what actually restores you. Relatable + personal.",
+            "name": "'What you want' confident flex (Respect – Aretha)",
+            "pattern": "Show exactly what you offer in the most satisfying way — 'here's what we do, and we do it well.' For Laura: a clean, proud montage of signature treatments. Own-it energy for a service brand.",
         },
         {
-            "name": "Justin Bieber 'EVERYTHING HALLELUJAH' listing Reels",
-            "pattern": "Brand-friendly listing format — rapid text overlays of things that belong together.",
+            "name": "'Sketch my outfit' draw-to-real morph (original audio)",
+            "pattern": "Sketch each item onto yourself, then each drawing morphs into the real thing. For Laura: 'sketch my routine' — draw each step, morph into the actual product/result. Equal parts art project and reveal.",
         },
         {
-            "name": "Ariana Grande 'Hate That I Made You Love Me' situationship format",
-            "pattern": "Apply breakup-song energy to skin situationships — bad habits, toxic products, regrets.",
+            "name": "'Do you wanna?' question-into-answer (Human Nature – MJ)",
+            "pattern": "Open with a 'do you wanna…' prompt about whether you're ready, then cut to you fully doing the thing. For Laura: 'do you wanna finally stop guessing with your skin?' → cut to the consult/treatment in motion.",
         },
         {
-            "name": "'DACE' by Slayyyter — Model Mode trend",
-            "pattern": "Flip a rough or low-energy moment into a confident editorial pose on the beat drop. Strong for 'bad skin day → treatment day' or before/after energy.",
+            "name": "'Girl grip' one-hand haul flex (I'm Every Woman – Chaka Khan)",
+            "pattern": "Haul your entire life in one hand with total confidence. For Laura: the one-handed grip of all her must-have products/tools heading into a treatment — a flex that doubles as a product showcase.",
         },
         {
-            "name": "'Freakin' Out' by Dexter and the Moonrocks — 'remember who you are' format",
-            "pattern": "Straight-to-camera selfie + emotional text overlay, then transition into a montage of defining moments. Identity-driven storytelling — powerful for skin journey content.",
-        },
-        {
-            "name": "Hand-swipe transition (no audio required)",
-            "pattern": "Film empty space, swipe/cover camera, uncover to reveal a transformation. No trending audio needed — the visual payoff carries it. Ideal for treatment results, product reveals, routine before/after.",
+            "name": "'Lens wipe transition' glow-up reveal",
+            "pattern": "Film the 'before,' wipe the lens, reveal the glow-up — product, aesthetic, or skin shift. Clean, satisfying, hard to scroll past. Ideal for treatment before/after with zero fancy editing.",
         },
     ],
     "viral_formats": [
         {
-            "name": "'Remember who you are' slow-motion identity reveal",
-            "pattern": "Start with a straight-to-camera selfie, text overlay of an identity statement, then slow-motion montage of defining moments. For Laura: 'I am someone who heals skin, not hides it.' Emotional, shareable, stops the scroll.",
+            "name": "'Plan ABC' alternate-timeline slides",
+            "pattern": "Each slide reveals a different hypothetical path — the dream, the chaos, the 'honestly that works too.' For Laura: 'Plan A: perfect routine. Plan B: barrier repair after I overdid it. Plan C: just SPF and sleep.' Playful, bendable to any niche.",
         },
         {
-            "name": "Raw conversational Reel",
-            "pattern": "No production value. Face to camera, natural light, talking directly to the viewer about one skin truth. The style is personal and immediate — like a voice note turned into a video. Outperforming high-production posts across all beauty niches right now.",
+            "name": "'Stomp to reveal' jump transition",
+            "pattern": "Each jump/stomp peels back the background until you land somewhere new. For Laura: stomp from a dull bathroom-mirror skin moment into the glowing treatment-room reveal. Earns the build-up.",
+        },
+        {
+            "name": "'Too shy to take pics in public' (introvert vs ride-or-die)",
+            "pattern": "One person mortified to be photographed; the other directs a full editorial like nobody's watching. For Laura: the nervous-about-their-skin client vs Laura, the ride-or-die who sees the glow-up potential. Wildly relatable.",
+        },
+        {
+            "name": "'Stretched word' swipe-for-payoff carousel",
+            "pattern": "One word stretched across a whole carousel — each slide pairs a sliver of the word with a relatable thought; the slow reveal IS the hook. For Laura: 'B-A-R-R-I-E-R' across slides, each one a myth or truth, punchline on the last swipe. Pure save-bait.",
         },
         {
             "name": "Before/after with emotional narration",
-            "pattern": "Not just visual transformation — the creator narrates the emotional experience of the journey over the visual. 'This is the face that cried in my car before this appointment' level of honesty. Deeply shareable because it's human, not clinical.",
-        },
-        {
-            "name": "Save-bait carousel (educational)",
-            "pattern": "Multi-slide carousel where each slide delivers one specific, actionable insight. Pigmentation map, acne trigger guide, barrier damage checklist. The last slide asks a question or has a soft CTA. Gets saves, which signals the algorithm to push reach.",
-        },
-        {
-            "name": "Day-in-the-life treatment room",
-            "pattern": "Unscripted follow-along of a full day in the treatment room — client prep, treatments, product choices, end-of-day. No script, no polish. Builds massive parasocial trust and positions Laura as the expert people want in their corner.",
+            "pattern": "Narrate the FEELING of the journey over the visual — 'this is the face that cried in my car before this appointment.' Human, not clinical. Deeply shareable evergreen format.",
         },
     ],
     "content_behaviors": [
         "Raw, unpolished content outperforming high-production posts",
-        "Strong hooks in first 0-2 seconds = everything",
+        "Strong hooks in first 0-2 seconds = everything (looping hooks pull rewatches)",
         "Comment sections engineered as part of the content (ask, provoke, invite)",
         "Short-form Reels dominating reach over long-form",
         "Save-worthy carousels for education (pigmentation maps, acne guides, routines)",
@@ -177,15 +169,21 @@ INSTAGRAM_TRENDS = {
     ],
 }
 
-# ── Core Patterns Across Both Platforms ──────────────────────────────────────
+# ── Core Virality Patterns (the WHY behind the trends) ───────────────────────
+# Extracted across Later, New Engen, and Clipchamp June 2026 trend reporting.
 
 CROSS_PLATFORM_PATTERNS = [
-    "AUTHENTICITY WINS: unfiltered, honest, expert POV outperforms curated aesthetic",
-    "BEFORE/AFTER still dominates but needs a fresh emotional angle, not just visual",
-    "EDUCATION AS ENTERTAINMENT: teach something nobody told them — make it feel like a secret",
-    "COMMUNITY PROVOCATION: posts that generate comments get pushed by both algorithms",
-    "SAVE-BAIT: checklists, myth-busters, 'screenshot this' moments drive saves = reach",
-    "SOUND-IDENTITY: owning a recurring audio or sound signature builds brand recall",
+    "THE CONTRAST GAP: humor and shareability come from the distance between expectation and reality (job-but-illegal, water-vs-coffee, huge-words-tiny-stakes)",
+    "FAKE-OUT TWIST: set up one direction, swerve to another — the 'nevermind' pivot is the whole payoff",
+    "TENSION → RELIEF: build suspense around something almost going wrong, then resolve it (makes viewers tense, then relieved = rewatch)",
+    "SATISFYING TRANSITION: a physical trigger (wipe, stomp, beat, reach) snaps to a new scene — the cleaner the trigger, the more unscrollable",
+    "IDENTITY SHOWCASE: 'the thing that IS you' — lineups and alternate-timeline formats let personality carry the video",
+    "RELATABLE FLEX: ordinary behavior elevated (one-hand haul, hands-full stack) — recognition drives the share and the tag",
+    "SLOW-REVEAL HOOK: stretch the payoff across a loop or carousel so the swipe/rewatch IS the engagement (save-bait)",
+    "TRUST IS THE MOAT AI CAN'T FAKE: first-person, native, honest expert content is the one scarce thing — generic/polished is being devalued",
+    "REPEATABLE BIT: give the audience something to clip, quote, stitch, or recreate — a paid idea earns a second life as organic reach",
+    "AUTHORITY GETS CITED: genuine reviews/explainers/demos are what AI search surfaces — first-person expertise compounds discoverability (AEO)",
+    "RECURRING > ONE-OFF: trust compounds through repetition — a signature format or sound builds brand recall faster than scattered posts",
     "SKIN AS IDENTITY: people relate to their skin journey emotionally, not just physically",
 ]
 
@@ -361,56 +359,24 @@ def print_header():
     print()
 
 
+def _pulse_group(title: str, items: list) -> None:
+    """Print one trend-pulse group; items are dicts (name) or plain strings."""
+    print(f"  {title}")
+    for item in items:
+        name = item["name"] if isinstance(item, dict) else item
+        print(f"  › {name}")
+    print()
+
+
 def print_trend_pulse():
     print("── TREND PULSE ──────────────────────────────────────────────")
     print()
-    print("  TIKTOK — AUDIO-DRIVEN")
-    print("  › 'and Emily...that's all' — contrast/comparison")
-    print("  › Bob Ross audio — skill-progression before/afters")
-    print("  › Charli XCX 'Rock Music' — glitch-frame edits")
-    print("  › 'wow, ok' challenge — no-audio deadpan reactions")
-    print("  › Olivia Rodrigo album (June 12) — lyric confessionals")
-    print("  › '2026 Summer Anthem' 7-sec — massive reach, low barrier")
-    print("  › Nirvana 'nevermind' lyric — nostalgia + radical honesty")
-    print()
-    print("  TIKTOK — VIRAL FORMATS (NO AUDIO NEEDED)")
-    print("  › Everyday horror moments — relatable situational humor")
-    print("  › Color day challenge — one color, full day, 6-image grid")
-    print("  › Distracted mid-task freeze — reveal what has you hooked")
-    print("  › GRWM — highest-converting beauty format right now")
-    print("  › Unedited podcast-style talking head — trust > polish")
-    print("  › Treatment room POV — client's-eye view, immersive")
-    print()
-    print("  TIKTOK — HOT SKINCARE TOPICS")
-    print("  › Skin longevity replacing 'anti-aging' in search")
-    print("  › Korean beauty + barrier repair = mainstream moment")
-    print("  › Azelaic Acid trending for sensitive skin")
-    print("  › #fullfacenomascara — bold brows + dewy skin shift")
-    print("  › Exosome treatments going viral")
-    print()
-    print("  INSTAGRAM REELS — AUDIO-DRIVEN")
-    print("  › 'I Am Home' (Beat It) — strut into your third place")
-    print("  › 'I Have Therapy' POV — what actually restores you")
-    print("  › Algorithm Prefers format — meta self-aware humor")
-    print("  › Bieber 'EVERYTHING HALLELUJAH' — listing Reels")
-    print("  › Grande situationship audio — toxic product breakups")
-    print("  › 'DACE' Slayyyter — rough moment → confident flip")
-    print("  › 'Freakin Out' — 'remember who you are' identity montage")
-    print("  › Hand-swipe transition — no audio, visual transformation")
-    print()
-    print("  INSTAGRAM REELS — VIRAL FORMATS (NO AUDIO NEEDED)")
-    print("  › 'Remember who you are' slow-motion identity reveal")
-    print("  › Raw conversational Reel — face to camera, one truth")
-    print("  › Before/after with emotional narration over the visual")
-    print("  › Save-bait carousel — one insight per slide, saves = reach")
-    print("  › Day-in-the-life treatment room — unscripted follow-along")
-    print()
-    print("  CROSS-PLATFORM")
-    print("  › Before/after needs emotional angle, not just visual")
-    print("  › Save-bait: myth-busters, checklists, 'screenshot this'")
-    print("  › Comment provocation = algorithm fuel on both platforms")
-    print("  › Unpolished > high-production across the board right now")
-    print()
+    _pulse_group("TIKTOK — AUDIO-DRIVEN",            TIKTOK_TRENDS["audio_formats"])
+    _pulse_group("TIKTOK — VIRAL FORMATS (NO AUDIO)", TIKTOK_TRENDS["viral_formats"])
+    _pulse_group("TIKTOK — HOT SKINCARE TOPICS",      TIKTOK_TRENDS["skincare_topics"])
+    _pulse_group("INSTAGRAM — AUDIO-DRIVEN",          INSTAGRAM_TRENDS["formats"])
+    _pulse_group("INSTAGRAM — VIRAL FORMATS (NO AUDIO)", INSTAGRAM_TRENDS["viral_formats"])
+    _pulse_group("CORE VIRALITY PATTERNS",            CROSS_PLATFORM_PATTERNS)
     print("─" * 62)
     print()
 
