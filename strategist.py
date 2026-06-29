@@ -415,244 +415,159 @@ def save_output(content: str) -> str:
 
 DEMO_IDEAS = """
 ╔══════════════════════════════════════╗
-  1. THE SKIN THAT STARTED IT ALL
+  1.  DESCRIBE YOUR JOB BUT MAKE IT SOUND ILLEGAL
   Platform: TikTok
 ╚══════════════════════════════════════╝
 
 TREND PATTERN
-  Bob Ross "talent is a pursued interest" audio. The format shows a raw starting
-  point, then lets the progression speak — no narration needed. Authenticity is
-  the whole mechanic.
+  The 'describe your job but make it illegal' format pairs deadpan, felony-coded language with footage of legitimate expert work—the absurd contrast IS the comedy.
 
-HOOK  (first 2–3 seconds)
-  Extreme close-up of a client's inflamed, congested skin — no filter, no
-  flattering light. The Bob Ross audio drops softly. White text fades in:
-  "This was month 1."
+HOOK (first 2–3 seconds)
+  Close-up of Laura's gloved hands holding an extraction tool. Black text on screen: "describe my job but make it sound illegal." Beat of silence. She leans in toward congested skin under the lamp.
 
 VIDEO BREAKDOWN
-  Step 1 — Month 1: red, reactive, broken-out. Real. Laura's handwritten
-            treatment note flashes over it: "compromised barrier. we start here."
-  Step 2 — Month 2: same angle, same lighting. Skin quieting. Text: "we stopped
-            fighting it."
-  Step 3 — Month 3: texture smoothing, redness down. Text: "we listened instead."
-  Step 4 — Month 4: calm, clear, glowing. Final text fades in:
-            "this is what healing looks like." Soft hold. No CTA needed yet.
+  Step 1 — Laura extracts a visible comedone with a comedone extractor. On-screen text appears in real-time: "I get paid to puncture holes in people's faces."
+  Step 2 — Cut to dermaplaning footage. Text: "Then I take a blade to their cheekbones."
+  Step 3 — Cut to chemical peel application. Text: "And dissolve the top layer of their skin for fun."
+  Step 4 — Final frame: Laura winks at camera. Text: "They thank me. They pay me. They come back."
 
 WHY IT WORKS
-  The handwritten treatment note makes this feel like a real clinical story, not
-  a promo — it signals expertise without bragging. The no-filter approach on the
-  before shot builds instant trust with people who are tired of unrealistic
-  transformations. People save this because they want to come back to it when
-  their own skin feels hopeless.
+  Estheticians live in the gap between 'what I do' and 'how it sounds'—this format gives Laura permission to own that contradiction with humor. The deadpan narration paired with her confident, clinical hands builds trust through relatability. It's shareable because it flips the script on 'intimidating skincare'—she's the villain of her own story, and it's funny. Curiosity drives clicks: people tag friends saying "this is actually genius" and "why is this so accurate."
 
 CAPTION
-  Opening line: "Nobody gets clear skin by adding more. Most of my clients
-  needed to take away first."
-  Direction: Warm + direct. End with a soft question: "Where are you right now
-  in your skin journey?" to pull comments.
+  Opening line: "My lawyer says I can't explain the rest."
+  Direction: Warm, conspiratorial tone. Ask: "what's the most 'illegal-sounding' skincare thing you've had done?" — invite people to comment their own weird-but-worth-it treatments.
 
 ──────────────────────────────────────────────────────
 
 ╔══════════════════════════════════════╗
-  2. SORRY, I HAVE A FACIAL
-  Platform: Instagram Reels
-╚══════════════════════════════════════╝
-
-TREND PATTERN
-  "I Have Therapy" POV format. Creator deflects a social obligation with
-  "I have therapy" — then cuts to whatever actually restores them. The twist
-  is the reveal of what "therapy" really means to them.
-
-HOOK  (first 2–3 seconds)
-  Laura faces the camera directly. She looks slightly amused. Text appears:
-  "sorry I can't tonight, I have a facial." Hard cut to black — then the
-  treatment room materializes in low golden light.
-
-VIDEO BREAKDOWN
-  Step 1 — Treatment room reveal: warm towel being folded in slow motion.
-            No music yet. Just the soft sound of water.
-  Step 2 — Steam rising from a bowl of herbs. A client's hand relaxing open.
-            Text: "this is the thing I protect."
-  Step 3 — Laura pressing a gua sha tool along a jawline, slow and intentional.
-            Text: "one hour. no phone. no stress. just skin."
-  Step 4 — End frame: the client's face, peaceful. Text:
-            "this is where we actually heal." Music rises softly.
-
-WHY IT WORKS
-  The format taps straight into the current cultural moment of protecting your
-  restoration rituals — it positions a facial as a non-negotiable, not a luxury.
-  The golden light and sensory details (steam, warm towel, the sound of water)
-  make the viewer feel the experience before they've booked it. This drives
-  direct inquiries because people want to feel exactly that.
-
-CAPTION
-  Opening line: "Your skin doesn't need another product. It needs an hour where
-  someone actually listens to it."
-  Direction: Soft and inviting. End with: "What does your version of this look
-  like?" — low-friction engagement.
-
-──────────────────────────────────────────────────────
-
-╔══════════════════════════════════════╗
-  3. THINGS THAT DON'T BELONG ON A SENSITIVE FACE
-  Platform: Instagram Reels
-╚══════════════════════════════════════╝
-
-TREND PATTERN
-  Justin Bieber "EVERYTHING HALLELUJAH" rapid-listing format. Brand-friendly
-  rhythm of quick cuts with text overlays — each item listed lands like a
-  punctuation mark. The contrast between the list and the resolution is
-  where the emotion lives.
-
-HOOK  (first 2–3 seconds)
-  Laura holds up a recognizable drugstore toner. Deadpan expression. The music
-  kicks in and text flies across the screen: "and this one." The energy is
-  confident, not mean.
-
-VIDEO BREAKDOWN
-  Step 1 — Rapid cuts, one product per beat: alcohol toner, fragrance serum,
-            vitamin C at 20%, popular enzyme mask, exfoliating scrub. Each with
-            a single brutal text overlay. Fast and rhythmic.
-  Step 2 — The music slows. Laura sets everything aside. One plain gentle
-            cleanser sits alone on the counter.
-  Step 3 — She picks it up. Looks at camera. Text: "and then there's this."
-  Step 4 — Final frame, soft smile: "Sensitive skin isn't high-maintenance.
-            It's just misunderstood."
-
-WHY IT WORKS
-  Every person with reactive skin has a bathroom shelf full of the products in
-  step 1 — this video makes them feel seen and slightly called out at the same
-  time, which is the perfect recipe for a share. The pivot from fast to slow
-  creates a satisfying emotional release. "Screenshot this" moments are built
-  into the format.
-
-CAPTION
-  Opening line: "If your face is always red, it's not your skin. It's your
-  products."
-  Direction: Bold but not preachy. Add: "Screenshot this and audit your shelf
-  tonight." — drives saves and DMs.
-
-──────────────────────────────────────────────────────
-
-╔══════════════════════════════════════╗
-  4. "AND LAURA… THAT'S ALL"
+  2.  BARRIER REPAIR GLOW-UP: THE REACHING OUT TRANSITION
   Platform: TikTok
 ╚══════════════════════════════════════╝
 
 TREND PATTERN
-  "and Emily… that's all" contrast audio. The format places two options side
-  by side — one complex and overwhelming, one clear and superior. The audio
-  does the editorial work so the visuals can stay simple.
+  The 'reaching out transition' uses a beat-drop moment to snap from one emotional/aesthetic state to another—the physical reach IS the trigger that lands the transformation.
 
-HOOK  (first 2–3 seconds)
-  The audio plays over a stark split screen. Left side: a complex 10-product
-  flatlay under harsh white light. Right side: Laura's clean treatment table,
-  one product, warm light. Text builds: "your 10-step routine… and Laura."
+HOOK (first 2–3 seconds)
+  Laura in bed, under blankets, no makeup, face dull and slightly red. She's on her phone. Text on screen: "me when my barrier was destroyed." Melancholic, muted color grade. She reaches her hand out toward the camera.
 
 VIDEO BREAKDOWN
-  Step 1 — Left panel pulses: clinical graphics of actives stacked on actives.
-            Text: "Add more. Strip more. Push through the purge."
-  Step 2 — Right panel holds steady: Laura's table, unhurried. Text:
-            "What does your skin actually need right now?"
-  Step 3 — Left panel fades. Right panel expands to full screen.
-            Text builds slowly: "Barrier first. Always."
-  Step 4 — End card on Laura's face, calm and direct:
-            "Book a skin consult. We start with less."
+  Step 1 — At the beat-drop, cut to Laura standing in her treatment room, glowing, bare skin, completely confident. She's wearing a simple white linen shirt. The lighting is warm and clean. Text: "me after 6 weeks of barrier-first repairs."
+  Step 2 — Flash back to her face in natural light: skin is noticeably clearer, less reactive, plump. She touches her cheek lightly. Text: "ceramides + lipids + one rule: stop guessing."
+  Step 3 — Quick cuts of her holding her signature barrier products. Each product lands on the beat. Text: "the non-negotiables."
+  Step 4 — Final frame: Laura, bare-faced, looking directly at camera. Text: "your barrier isn't broken. it just needs the right ingredients."
 
 WHY IT WORKS
-  This takes a real stance in a space full of people who have been over-sold
-  complexity — and it does it without attacking anyone directly. The restraint
-  of the right-panel visual communicates authority better than any credential
-  could. The comment section will fill with people who've been over-prescribed,
-  which the algorithm will read as high-engagement content.
+  This format taps into the emotional journey people actually take with their skin—shame → curiosity → action → relief. The reaching motion feels intimate and intentional, not performative. The before/after isn't about perfection; it's about visible comfort and confidence in your own skin. Save-bait for people whose barrier is currently compromised. Shareable because it reframes barrier repair as a turning point, not vanity.
 
 CAPTION
-  Opening line: "I'm not against dermatologists. I'm against routines that
-  treat your skin like a problem to solve."
-  Direction: Confident + inviting debate. "What's the most overwhelming routine
-  you've ever tried?" to spark replies.
+  Opening line: "if your barrier is sending out an SOS right now, this is the post for you."
+  Direction: Honest, warm, non-preachy. Include a link to barrier-first routine guide or offer a consultation. Encourage: "what's your barrier repair win?" — invite people to comment their own breakthroughs.
 
 ──────────────────────────────────────────────────────
 
 ╔══════════════════════════════════════╗
-  5. I BROKE UP WITH MY ROUTINE
-  Platform: TikTok + Instagram Reels
+  3.  ME AND MY POV: WHAT I'M ACTUALLY SEEING
+  Platform: TikTok
 ╚══════════════════════════════════════╝
 
 TREND PATTERN
-  Ariana Grande "Hate That I Made You Love Me" situationship energy. The
-  format maps breakup-song lyrics onto a relatable non-romantic obsession —
-  the emotional logic of a bad relationship applied to something the audience
-  recognizes immediately.
+  Split-screen format (Laura's face reaction on top, what she's looking at on bottom) creates intimacy and demystifies the expert's POV—you see exactly what trained eyes see and how she responds in real-time.
 
-HOOK  (first 2–3 seconds)
-  Tight shot: a well-known actives serum on the bathroom counter. Ariana's
-  track drops. Laura's voice (or text): "I spent $89 on you." Long pause.
-  "And you burned me every single time."
+HOOK (first 2–3 seconds)
+  Black screen with text: "what I see vs. what you see." Split opens into two frames: top = Laura's face in selfie mode, looking down. Bottom = an extreme close-up of congested, textured skin under the lamp (client consents to appear).
 
 VIDEO BREAKDOWN
-  Step 1 — Moody "situationship" montage: reaching for the serum at midnight,
-            applying too much, face flushing red. Text: "I kept going back."
-  Step 2 — The breakdown: skin close-up showing irritation. Text:
-            "you were destroying my barrier and I called it purging."
-  Step 3 — The pivot: two simple products on a clean counter, morning light.
-            Text: "I downgraded. My skin has never been better."
-  Step 4 — CTA hold: "If your skin is always reacting — DM me.
-            Let's break the cycle."
+  Step 1 — Top frame: Laura's face neutral, studying. Bottom frame: her hands gently palpating the skin. Her eyes narrow slightly (professional concern, not judgment).
+  Step 2 — Top frame: Laura leans back slightly, nods. Bottom frame: zoom in on a cluster of closed comedones and mild redness. Text overlay bottom frame: "dehydrated barrier + fungal acne trigger."
+  Step 3 — Top frame: Laura's face softens into a knowing smile. Bottom frame: her gloved fingers moving to show the client where the inflammation is. Text: "totally fixable. this is my lane."
+  Step 4 — Top frame: Laura looks directly at camera with quiet confidence. Bottom frame: a quick flash of her custom barrier + azelaic acid routine. Text: "4-week protocol."
 
 WHY IT WORKS
-  The situationship framing unlocks an emotional door that straight skincare
-  education never reaches — people feel the guilt, the loyalty, and the relief
-  of leaving a bad product, all in 30 seconds. Acne and sensitive skin audiences
-  will screenshot the "purging" line specifically and share it widely. High
-  save and share rate almost guaranteed.
+  This format makes expertise visible and human. People feel seen because they watch Laura's assessment in real-time—it's not a lecture, it's her silent competence. The split-screen trick keeps viewers' eyes moving, which reduces scroll-past. It's educational without feeling like a lesson. High-save potential for people who recognize their own skin in the bottom frame—they're essentially watching their own future consultation.
 
 CAPTION
-  Opening line: "We need to talk about the products we keep going back to even
-  when they don't treat us right."
-  Direction: Funny + self-aware. End with: "Which product were you in a
-  situationship with?" — comment magnet.
+  Opening line: "this is what I see before you even tell me what's bothering you."
+  Direction: Reassuring, expert-led, no BS. Invite: "drop your skin concern below—let me guess what I'd see." Make the comment section an engagement game.
 
 ──────────────────────────────────────────────────────
 
 ╔══════════════════════════════════════╗
-  6. I AM HOME
+  4.  WHEN YOU GET THE PICTURE: THE UNFILTERED FREAK-OUT
+  Platform: TikTok
+╚══════════════════════════════════════╝
+
+TREND PATTERN
+  The 'when you get the picture' format uses genuine, unstyled emotional reaction as the entire content—the shared gasp/laugh/disbelief IS the proof that something real just happened.
+
+HOOK (first 2–3 seconds)
+  Laura and a team member (or returning client) are sitting side-by-side on a treatment stool, both looking at Laura's phone. You don't see the phone screen yet. Trending audio kicks in (CORTIS). Laura's face shifts into slow-motion disbelief.
+
+VIDEO BREAKDOWN
+  Step 1 — They're both staring at the phone. The team member's jaw drops slightly. Laura exhales like "oh my god."
+  Step 2 — Quick cut: flash of the client's before photo (8 weeks ago, reactive, textured, closed comedones everywhere).
+  Step 3 — Quick cut: flash of the after photo (clear, balanced, skin barrier visibly healed, even tone). The contrast is stark and real.
+  Step 4 — Cut back to Laura and team member. Both are laughing, shaking their heads in disbelief. Laura points at the phone and mouths "this is INSANE." No voiceover—just the audio and their genuine reactions.
+
+WHY IT WORKS
+  Transformation content dominates TikTok, but fabricated before/afters don't convert trust anymore. This format leaks authenticity—you're watching real people react to real results, which is infinitely more persuasive than a polished grid post. The shared disbelief creates a "would you believe this?" moment that compels shares. Works algorithmically because the genuine reaction creates rewatchability—people loop it to see their expressions again. Builds trust by showing Laura doesn't oversell; the results sell themselves.
+
+CAPTION
+  Opening line: "the only context you need is that this took 8 weeks and a lot of patience."
+  Direction: Celebratory but grounded. Drop names and results (with consent). Encourage: "have you had a skin moment that made you stop and stare?" — invite followers to share their own wins.
+
+──────────────────────────────────────────────────────
+
+╔══════════════════════════════════════╗
+  5.  SKIN IDENTITY LINEUP: THE THING THAT IS YOU
   Platform: Instagram Reels
 ╚══════════════════════════════════════╝
 
 TREND PATTERN
-  "I Am Home" format set to Michael Jackson's "Beat It." Creator struts
-  confidently into their third place — the space that is unmistakably,
-  unapologetically theirs. The energy is ownership, not performance.
+  Fast-cut identity lineup format (Jujutsu Kaisen style) uses rapid-fire character reveals where each person/product IS a personality—the snaps between frames create energy and recognition.
 
-HOOK  (first 2–3 seconds)
-  Slow-motion: Laura's hand pushes open the treatment room door. "Beat It"
-  drops. She walks in like she owns it — because she does.
+HOOK (first 2–3 seconds)
+  Black screen. Trending original audio with energetic beat. Text appears: "Skin By Laura Lo: the lineup." First person strikes a pose, holding a product or embodying an archetype.
 
 VIDEO BREAKDOWN
-  Step 1 — Full confident strut to the treatment table. She flips on the
-            facial light without looking at it. One finger points at the
-            camera: "you. sit down."
-  Step 2 — Quick cuts in rhythm: warm towels steaming, a gua sha tool
-            catching the light, a jade roller on silk cloth, gloved hands
-            over a clean setup.
-  Step 3 — Freeze frame as she snaps on her second glove. Text drops
-            in bold: "This is where skin actually heals."
-  Step 4 — Smash cut to a client sinking into the chair, exhaling, eyes
-            closing. Final text: "Book your spot. Link in bio."
+  Step 1 — Frame snaps to "The Barrier Girlie." A team member or client holds a ceramide serum, serious expression, text overlay: "I don't have a skincare routine. I have a religion." Snap.
+  Step 2 — Frame snaps to "The Azelaic Acid Believer." Another person holds the azelaic acid product, confident smirk. Text: "yes it's purging. yes I'm staying. yes I'm obsessed." Snap.
+  Step 3 — Frame snaps to "The SPF Evangelist." Holding sunscreen, pointing at camera. Text: "you think you're being smart, but I'm 10 steps ahead." Snap.
+  Step 4 — Frame snaps to "The Korean Beauty Convert." Holding a Korean treatment product, unbothered energy. Text: "sorry your routine is boring." Snap.
+  Step 5 — Frame snaps to Laura, center, holding a consultation sheet. Text: "The person who sees through the BS." She winks.
 
 WHY IT WORKS
-  Ownership energy is magnetic — the viewer feels the confidence of someone
-  fully in their element, and it makes them want to be in that room. The
-  contrast between the "Beat It" power walk and the soft, healing atmosphere
-  that follows creates a visual tension that people watch twice. Bookings
-  reliably spike after this format when the space looks and feels this good.
+  People don't just buy products; they buy identity. This format lets followers see themselves in each archetype—they recognize "oh, I'm the barrier girlie" and suddenly that product feels chosen for them, not sold to them. The rapid snaps create momentum that keeps people watching. High rewatch value because each frame is a mini-reveal. Shareable because people tag friends ("you're the azelaic acid believer and I can't be convinced otherwise"). The format positions Laura as the hub connecting different skin archetypes, which builds community.
 
 CAPTION
-  Opening line: "The treatment room is the only place I'm completely in my
-  element. And it shows."
-  Direction: Confident + warm. Close with: "What's your version of this
-  space?" — invites community and repeat comments.
+  Opening line: "which one are you? (everyone's allowed to be multiple)"
+  Direction: Playful, inviting. Ask people to comment their archetype. Respond to comments by validating each one—builds comment-section engagement that feeds the algorithm.
+
+──────────────────────────────────────────────────────
+
+╔══════════════════════════════════════╗
+  6.  SKIP THE FILTER, KEEP THE GLOW: BEFORE/AFTER WITH EMOTIONAL TRUTH
+  Platform: Instagram Reels
+╚══════════════════════════════════════╝
+
+TREND PATTERN
+  Raw, unfiltered before/after paired with honest emotional narration (not clinical language)—the human story IS the transformation, and it compels saves because people feel witnessed.
+
+HOOK (first 2–3 seconds)
+  Laura, speaking directly to camera, soft natural lighting. No music at first. Text on screen: "this face cried in my car before this appointment." She's holding a phone with a before photo visible.
+
+VIDEO BREAKDOWN
+  Step 1 — Narration over the before photo: "this was 12 weeks ago. hormonal acne, angry texture, reactive everything. she was done guessing." The photo is unfiltered, honest, raw.
+  Step 2 — Soft music enters. Transition (a lens wipe, or a slow pan). Laura's voice continues: "we didn't jump to actives. we started with barrier repair, Korean-fusion treatments, and patience."
+  Step 3 — The after photo appears. Same lighting, same angle. The skin is noticeably clearer, calmer, the tone is even. Texture is refined. No filter, no editing. Laura: "this is what 12 weeks of trusting the process looks like."
+  Step 4 — Cut back to Laura's face, warm and grounded. She touches her own cheek. Text on screen: "your skin doesn't need you to suffer. it needs you to listen." Beat.
+
+WHY IT WORKS
+  Emotional narratives over clinical before/afters convert saves at 10x the rate because they validate the journey, not just the outcome. People save this content because they recognize their own struggle in the 'before'—it's aspirational AND accessible. The unfiltered photos build trust in an industry drowning in filters. High-comment engagement because people drop their own stories in the replies. Algorithmically strong because the rewatch pattern is high (people come back to feel the hope). Shareable because it reframes acne/reactive skin as something fixable, not a personality flaw.
+
+CAPTION
+  Opening line: "her skin didn't fail her. the advice she was given did. here's what changed."
+  Direction: Warm, validating, no BS. Include a note about the protocol used (barrier repair + specific treatments). Invite: "drop a 🧴 if you're also done guessing" — normalize the struggle and build solidarity.
 
 ──────────────────────────────────────────────────────"""
 
